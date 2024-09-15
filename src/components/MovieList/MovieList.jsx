@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import css from "./MovieList.module.css"
+import clsx from "clsx";
 export default function MovieList({movies}){
+  const location=useLocation();
   return(
     <div>
-      <ul>
+      <ul className={clsx(css.MovieList)}>
          {movies.map((movie)=>(
-             <li key={movie.id}><Link to={`/movies/${movie.id}`}>{movie.original_title}</Link></li>
+             <li className={clsx(css.MovieListElement)} key={movie.id}><Link className={clsx(css.MovieListElementLink)} to={`/movies/${movie.id}`} state={location}>{movie.original_title}</Link></li>
          ))}
       </ul>
     </div>

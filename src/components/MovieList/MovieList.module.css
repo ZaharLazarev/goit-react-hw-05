@@ -1,0 +1,11 @@
+.MovieList{
+  padding: 0;
+}
+.MovieListElement:hover {
+   background-color:rgb(78, 78, 238);
+   color: black;
+}
+
+.MovieListElement:hover .MovieListElementLink{
+  color: black;
+}

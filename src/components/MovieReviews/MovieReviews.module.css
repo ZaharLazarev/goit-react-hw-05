@@ -1,0 +1,10 @@
+.MovieReviewsList{
+  padding: 0;
+}
+.MovieReviewsAuthor{
+  color: rgb(192, 22, 22);
+  font-weight: 600;
+}
+.MovieReviewsContent{
+  width: 50%;
+}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import {getTrends} from "../../trending-api"
-import TrendList from "../../components/TrendList/TrendList";
+import MovieList from "../../components/MovieList/MovieList";
+import css from "./HomePage.module.css"
+import clsx from "clsx";
 export default function HomePage(){
   const [trends, setTrends]=useState([])
   useEffect(()=>{
@@ -17,7 +19,8 @@ export default function HomePage(){
   },[])
   return(
     <div>
-       <TrendList trends={trends}/>
+      <p className={clsx(css.Trends)}>Trends:</p>
+       <MovieList movies={trends}/>
     </div>
   )
 }

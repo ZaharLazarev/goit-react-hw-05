@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
+import clsx from "clsx";
+import css from "./Navigation.module.css"
 export default function Navigation(){
   return(
-    <ul>
+    <ul className={clsx(css.navigationList)}>
     <li>
       <NavLink to="/">
         Home

@@ -1,4 +1,6 @@
 import { useSearchParams } from "react-router-dom";
+import css from "./MovieSearch.module.css"
+import clsx from "clsx";
 export default function MovieSearch(){
    const [params, setParams]=useSearchParams();
    const handleSubmit=(e)=>{
@@ -8,9 +10,9 @@ export default function MovieSearch(){
      e.target.reset();
    }
    return(
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="movieSearch"/>
-      <button type="submit">Search</button>
+    <form className={clsx(css.MovieForm)} onSubmit={handleSubmit}>
+      <input className={clsx(css.MovieFormInput)} type="text" name="movieSearch"/>
+      <button className={clsx(css.MovieFormButton)} type="submit">Search</button>
     </form>
    )
 }

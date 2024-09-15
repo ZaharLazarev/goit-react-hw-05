@@ -1,0 +1,19 @@
+.MovieForm{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.MovieFormInput{
+  width: 280px;
+  height: 20px;
+}
+.MovieFormButton{
+  height:40px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(230, 220, 220);
+}
+.MovieFormButton:hover{
+  background-color: gray;
+}
